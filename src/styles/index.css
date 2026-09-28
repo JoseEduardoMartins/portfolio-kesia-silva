@@ -1,3 +1,143 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --ink: #1B1220;
+    --ink-80: #2A1E30;
+    --paper: #FBF4F2;
+    --coral: #FF4B3E;
+    --teal: #0FB6A2;
+    --gold: #F4B740;
+    --muted: #8A7E86;
+    --line: #E7DAD3;
+    --line-dark: rgba(251, 244, 242, 0.14);
+    --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+    --gut: clamp(1.25rem, 5vw, 6rem);
+    --sec: clamp(4.5rem, 11vw, 10rem);
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        overflow-x: hidden;
+    }
+    h1,
+    h2,
+    h3 {
+        font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+        font-weight: 700;
+        line-height: 1.02;
+        letter-spacing: -0.02em;
+    }
+    :focus-visible {
+        outline: 2.5px solid var(--coral);
+        outline-offset: 3px;
+        border-radius: 2px;
+    }
+}
+
+@layer components {
+    /* Skip link (styles.css .skip-link) */
+    .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: -3rem;
+        background: var(--ink);
+        color: var(--paper);
+        padding: 0.6rem 1rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+        z-index: 100;
+        transition: top 0.2s var(--ease);
+    }
+    .skip-link:focus {
+        top: 0;
+    }
+
+    /* Highlight (styles.css .hl / .hl-coral) */
+    .hl {
+        background: linear-gradient(
+            transparent 60%,
+            color-mix(in srgb, var(--gold) 55%, transparent) 60%
+        );
+        padding: 0 0.1em;
+    }
+    .hl-coral {
+        color: var(--coral);
+        font-style: italic;
+    }
+
+    /* Grid decorativo do hero (styles.css .hero__grid) */
+    .hero-grid {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: linear-gradient(var(--line-dark) 1px, transparent 1px),
+            linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
+        background-size: clamp(48px, 8vw, 88px) clamp(48px, 8vw, 88px);
+        -webkit-mask-image: radial-gradient(
+            ellipse 90% 70% at 50% 30%,
+            #000 40%,
+            transparent 100%
+        );
+        mask-image: radial-gradient(
+            ellipse 90% 70% at 50% 30%,
+            #000 40%,
+            transparent 100%
+        );
+    }
+
+    /* Máscara lateral do marquee (styles.css .marquee) */
+    .marquee-mask {
+        -webkit-mask-image: linear-gradient(
+            90deg,
+            transparent,
+            #000 8%,
+            #000 92%,
+            transparent
+        );
+        mask-image: linear-gradient(
+            90deg,
+            transparent,
+            #000 8%,
+            #000 92%,
+            transparent
+        );
+    }
+}
+
+@layer utilities {
+    /* Reveal on scroll (main.js + styles.css [data-reveal]) */
+    [data-reveal] {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    [data-reveal].is-visible {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    .animate-marquee {
+        animation: none !important;
+    }
+}
