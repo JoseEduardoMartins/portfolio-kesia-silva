@@ -17,8 +17,10 @@ const VisualSystem = () => {
             aria-labelledby="language-title"
             className="px-[var(--gut)] py-[var(--sec)] relative"
         >
-            <Reveal className="flex flex-wrap gap-x-8 gap-y-4 items-end justify-between mb-[clamp(2rem,5vw,3.5rem)]">
+            <Reveal>
                 <SectionLabel index="03">{t("visualSystem.label")}</SectionLabel>
+            </Reveal>
+            <Reveal className="flex flex-wrap gap-x-8 gap-y-4 items-end justify-between mb-[clamp(2rem,5vw,3.5rem)]">
                 <h2
                     id="language-title"
                     className="text-[clamp(2.25rem,1.5rem+3.4vw,4.75rem)] tracking-[-0.03em]"
