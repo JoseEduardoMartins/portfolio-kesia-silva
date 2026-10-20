@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-    --ink: #1B1220;
-    --ink-80: #2A1E30;
-    --paper: #FBF4F2;
-    --coral: #FF4B3E;
-    --teal: #0FB6A2;
-    --gold: #F4B740;
-    --muted: #8A7E86;
-    --line: #E7DAD3;
-    --line-dark: rgba(251, 244, 242, 0.14);
+    --ink: #26191B;
+    --ink-80: #352528;
+    --paper: #F1E8D9;
+    --coral: #6A2230;
+    --teal: #9C8A79;
+    --gold: #C6B396;
+    --muted: #8A7B6F;
+    --line: #DED2BE;
+    --line-dark: rgba(241, 232, 217, 0.14);
     --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
     --gut: clamp(1.25rem, 5vw, 6rem);
     --sec: clamp(4.5rem, 11vw, 10rem);
@@ -67,7 +67,7 @@
     .hl {
         background: linear-gradient(
             transparent 60%,
-            color-mix(in srgb, var(--gold) 55%, transparent) 60%
+            color-mix(in srgb, var(--coral) 26%, transparent) 60%
         );
         padding: 0 0.1em;
     }

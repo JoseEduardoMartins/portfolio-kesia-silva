@@ -21,7 +21,7 @@ const sizes: Record<ButtonSize, string> = {
 };
 
 const variants: Record<ButtonVariant, string> = {
-    solid: "bg-coral text-paper hover:bg-[#ff3524]",
+    solid: "bg-coral text-paper hover:bg-[#551A24]",
     ghost: "border-current text-current hover:bg-ink hover:text-paper hover:border-ink",
     outline: "border-paper text-paper hover:bg-paper hover:text-ink",
 };

@@ -19,6 +19,6 @@ test("ServiceCard mostra idx, título e descrição", () => {
 
 test("Swatches renderiza as 4 cores da paleta", () => {
     render(<Swatches />);
-    expect(screen.getByText("Ameixa")).toBeInTheDocument();
-    expect(screen.getByText("Ouro")).toBeInTheDocument();
+    expect(screen.getByText("Bordô")).toBeInTheDocument();
+    expect(screen.getByText("Taupe")).toBeInTheDocument();
 });

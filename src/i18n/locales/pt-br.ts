@@ -115,7 +115,7 @@ const ptBr = {
             markTag: "MONOGRAMA",
             markCaption: "Marca pessoal · construção geométrica",
             paletteTag: "PALETA",
-            paletteCaption: "Sistema cromático · contraste & energia",
+            paletteCaption: "Sistema cromático · bordô, areia & neutros",
             typeTag: "TIPOGRAFIA",
             typeCaption: "Escala tipográfica · hierarquia clara",
             specimenTitle: "Título",

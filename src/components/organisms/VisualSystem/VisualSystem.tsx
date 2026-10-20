@@ -73,7 +73,7 @@ const VisualSystem = () => {
 
                 <Reveal
                     as="figure"
-                    className={`${tile} bg-[linear-gradient(135deg,#0FB6A2,#0a8f80)] border-teal text-white`}
+                    className={`${tile} bg-[linear-gradient(135deg,#9C8A79,#6F6052)] border-teal text-white`}
                 >
                     <SelectionFrame light className="!inset-[0.6rem]" />
                     <span className={`${tag} text-white/80`}>
