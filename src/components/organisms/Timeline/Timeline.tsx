@@ -3,6 +3,8 @@ import SectionLabel from "@/components/molecules/SectionLabel";
 import ExperienceEntry from "@/components/molecules/ExperienceEntry";
 import CertCard from "@/components/molecules/CertCard";
 import Chip from "@/components/atoms/Chip";
+import ScriptLabel from "@/components/atoms/ScriptLabel";
+import SelectionFrame from "@/components/atoms/SelectionFrame";
 import Reveal from "@/components/Reveal";
 import experiences from "@/data/experiences";
 import certifications from "@/data/certifications";
@@ -19,12 +21,18 @@ const Timeline = () => {
             <Reveal>
                 <SectionLabel index="04">{t("timeline.label")}</SectionLabel>
             </Reveal>
-            <h2
-                id="timeline-title"
-                className="text-[clamp(2.25rem,1.5rem+3.4vw,4.75rem)] tracking-[-0.03em] mb-[clamp(2rem,5vw,3.5rem)]"
-            >
-                {t("timeline.title")}
-            </h2>
+            <Reveal className="relative inline-block mb-[clamp(2rem,5vw,3.5rem)]">
+                <ScriptLabel className="block ml-1 mb-[-0.2em]">
+                    {t("timeline.script")}
+                </ScriptLabel>
+                <h2
+                    id="timeline-title"
+                    className="text-[clamp(2.25rem,1.5rem+3.4vw,4.75rem)] tracking-[-0.03em]"
+                >
+                    {t("timeline.title")}
+                </h2>
+                <SelectionFrame />
+            </Reveal>
 
             <div className="grid grid-cols-[1.4fr_1fr] gap-[clamp(2rem,6vw,5rem)] items-start max-[900px]:grid-cols-1">
                 <ol

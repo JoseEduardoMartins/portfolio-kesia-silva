@@ -96,6 +96,35 @@
         );
     }
 
+    /* Textura de grão para seções escuras (ruído fractal estático) */
+    .grain {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.09;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 160px 160px;
+    }
+
+    /* Moldura "handles" de ferramenta de design (SelectionFrame) */
+    .handles {
+        position: absolute;
+        inset: calc(-1 * clamp(0.6rem, 1.6vw, 1.1rem));
+        pointer-events: none;
+        border: 1px dashed var(--line);
+        border-radius: 0.3rem;
+    }
+    .handles--light {
+        border-color: var(--line-dark);
+    }
+    .handle-corner {
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background: var(--coral);
+    }
+
     /* Máscara lateral do marquee (styles.css .marquee) */
     .marquee-mask {
         -webkit-mask-image: linear-gradient(

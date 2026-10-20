@@ -9,6 +9,7 @@ test("Home compõe as seções na ordem do index.html", () => {
         .map((s) => s.id)
         .filter(Boolean);
     expect(ids).toEqual([
+        "indice",
         "sobre",
         "servicos",
         "trabalho",

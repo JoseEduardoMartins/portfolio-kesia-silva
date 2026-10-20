@@ -3,6 +3,7 @@ import SectionLabel from "@/components/molecules/SectionLabel";
 import Swatches from "@/components/molecules/Swatches";
 import Specimen from "@/components/molecules/Specimen";
 import Composition from "@/components/molecules/Composition";
+import SelectionFrame from "@/components/atoms/SelectionFrame";
 import Reveal from "@/components/Reveal";
 
 const tile =
@@ -49,6 +50,7 @@ const VisualSystem = () => {
                 </Reveal>
 
                 <Reveal as="figure" className={`${tile} bg-ink border-ink`}>
+                    <SelectionFrame light className="!inset-[0.6rem]" />
                     <span className={`${tag} text-paper/60`}>
                         {t("visualSystem.paletteTag")}
                     </span>
@@ -59,6 +61,7 @@ const VisualSystem = () => {
                 </Reveal>
 
                 <Reveal as="figure" className={`${tile} bg-paper`}>
+                    <SelectionFrame className="!inset-[0.6rem]" />
                     <span className={`${tag} text-muted`}>
                         {t("visualSystem.typeTag")}
                     </span>
@@ -72,6 +75,7 @@ const VisualSystem = () => {
                     as="figure"
                     className={`${tile} bg-[linear-gradient(135deg,#0FB6A2,#0a8f80)] border-teal text-white`}
                 >
+                    <SelectionFrame light className="!inset-[0.6rem]" />
                     <span className={`${tag} text-white/80`}>
                         {t("visualSystem.compTag")}
                     </span>

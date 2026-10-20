@@ -25,6 +25,7 @@ const ptBr = {
             specProcessValue: "Craft clássico × IA generativa",
             ctaPrimary: "Vamos criar juntos",
             ctaSecondary: "Ver linguagem visual",
+            script: "portfólio '25",
             marquee: [
                 "Design Gráfico",
                 "Identidade Visual",
@@ -34,8 +35,22 @@ const ptBr = {
                 "Apresentações",
             ],
         },
+        contents: {
+            label: "Índice",
+            script: "dê uma olhada",
+            title: "Sumário",
+            items: {
+                sobre: "Sobre",
+                servicos: "Serviços",
+                trabalho: "Trabalho",
+                trajetoria: "Trajetória",
+                contato: "Contato",
+            },
+        },
         about: {
             label: "Sobre",
+            script: "oi, eu sou a Kesia",
+            portraitReserved: "retrato · espaço reservado",
             leadPre:
                 "Uno a sensibilidade estética do design clássico à inovação tecnológica — para transformar ideias em ",
             leadHl: "design de alto impacto",
@@ -46,6 +61,7 @@ const ptBr = {
         },
         services: {
             label: "Serviços",
+            script: "o que eu faço",
             title: "O que eu faço",
             items: {
                 s01: {
@@ -92,6 +108,7 @@ const ptBr = {
         },
         visualSystem: {
             label: "Linguagem",
+            script: "linguagem",
             title: "Sistema visual",
             note: "Um recorte do vocabulário estético que aplico nos projetos — cor, tipo e composição. ",
             noteSwap: "↳ espaço reservado para portfólio de peças reais",
@@ -109,6 +126,7 @@ const ptBr = {
         },
         timeline: {
             label: "Trajetória",
+            script: "minha trajetória",
             title: "Experiência & formação",
             experiences: {
                 e1: {
@@ -138,6 +156,7 @@ const ptBr = {
         },
         contact: {
             label: "Contato",
+            script: "bora conversar?",
             titlePre: "Tem uma marca para ",
             titleHl: "dar vida?",
             lead: "Vamos transformar suas ideias em design de alto impacto. Me chame para conversar sobre o seu projeto.",

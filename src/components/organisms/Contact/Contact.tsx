@@ -2,6 +2,8 @@ import { useTranslation } from "react-i18next";
 import SectionLabel from "@/components/molecules/SectionLabel";
 import Highlight from "@/components/atoms/Highlight";
 import Button from "@/components/atoms/Button";
+import ScriptLabel from "@/components/atoms/ScriptLabel";
+import Grain from "@/components/atoms/Grain";
 import ContactFact from "@/components/molecules/ContactFact";
 import Reveal from "@/components/Reveal";
 import config from "@/config";
@@ -13,12 +15,18 @@ const Contact = () => {
         <section
             id="contato"
             aria-labelledby="contact-title"
-            className="bg-ink text-paper text-center px-[var(--gut)] py-[var(--sec)] relative"
+            className="bg-ink text-paper text-center px-[var(--gut)] py-[var(--sec)] relative overflow-hidden"
         >
+            <Grain />
             <Reveal>
                 <SectionLabel index="05" light>
                     {t("contact.label")}
                 </SectionLabel>
+            </Reveal>
+            <Reveal>
+                <ScriptLabel className="inline-block mb-[-0.15em]">
+                    {t("contact.script")}
+                </ScriptLabel>
             </Reveal>
             <h2
                 id="contact-title"
