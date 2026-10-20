@@ -10,10 +10,10 @@ test("há 8 serviços com idx S/0x", () => {
 
 test("paleta tem as 4 cores do design", () => {
     expect(palette.map((c) => c.hex)).toEqual([
-        "#1B1220",
-        "#FF4B3E",
-        "#0FB6A2",
-        "#F4B740",
+        "#6A2230",
+        "#F1E8D9",
+        "#26191B",
+        "#9C8A79",
     ]);
 });
 

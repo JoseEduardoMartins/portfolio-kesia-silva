@@ -1,6 +1,6 @@
 import type { Swatch as SwatchModel } from "@/types";
 
-const darkText = new Set(["#F4B740", "#0FB6A2"]);
+const darkText = new Set(["#F1E8D9", "#9C8A79"]);
 
 const Swatch = ({ name, hex }: SwatchModel) => {
     const dark = darkText.has(hex);

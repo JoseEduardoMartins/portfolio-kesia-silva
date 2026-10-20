@@ -1,9 +1,9 @@
 import css from "./index.css?raw";
 
 test("define as CSS vars de cor do design", () => {
-    expect(css).toContain("--coral: #FF4B3E");
-    expect(css).toContain("--ink: #1B1220");
-    expect(css).toContain("--paper: #FBF4F2");
+    expect(css).toContain("--coral: #6A2230");
+    expect(css).toContain("--ink: #26191B");
+    expect(css).toContain("--paper: #F1E8D9");
 });
 
 test("define o highlight e a máscara do marquee", () => {
