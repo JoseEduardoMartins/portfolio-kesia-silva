@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@/i18n";
 import ServiceCard from "./ServiceCard";
-import Swatches from "./Swatches";
 
 test("ServiceCard mostra idx, título e descrição", () => {
     render(
@@ -15,10 +14,4 @@ test("ServiceCard mostra idx, título e descrição", () => {
     expect(
         screen.getByRole("heading", { name: "Identidade & Branding" })
     ).toBeInTheDocument();
-});
-
-test("Swatches renderiza as 4 cores da paleta", () => {
-    render(<Swatches />);
-    expect(screen.getByText("Bordô")).toBeInTheDocument();
-    expect(screen.getByText("Taupe")).toBeInTheDocument();
 });

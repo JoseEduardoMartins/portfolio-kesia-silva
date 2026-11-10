@@ -3,7 +3,7 @@ const ptBr = {
         header: {
             about: "Sobre",
             services: "Serviços",
-            language: "Linguagem",
+            language: "Projetos",
             journey: "Trajetória",
             contact: "Contato",
         },
@@ -24,7 +24,7 @@ const ptBr = {
             specProcessLabel: "Processo",
             specProcessValue: "Craft clássico × IA generativa",
             ctaPrimary: "Vamos criar juntos",
-            ctaSecondary: "Ver linguagem visual",
+            ctaSecondary: "Ver projetos",
             script: "portfólio '25",
             marquee: [
                 "Design Gráfico",
@@ -42,7 +42,7 @@ const ptBr = {
             items: {
                 sobre: "Sobre",
                 servicos: "Serviços",
-                trabalho: "Trabalho",
+                trabalho: "Projetos",
                 trajetoria: "Trajetória",
                 contato: "Contato",
             },
@@ -106,23 +106,25 @@ const ptBr = {
                 },
             },
         },
-        visualSystem: {
-            label: "Linguagem",
-            script: "linguagem",
-            title: "Sistema visual",
-            note: "Um recorte do vocabulário estético que aplico nos projetos — cor, tipo e composição. ",
-            noteSwap: "↳ espaço reservado para portfólio de peças reais",
-            markTag: "MONOGRAMA",
-            markCaption: "Marca pessoal · construção geométrica",
-            paletteTag: "PALETA",
-            paletteCaption: "Sistema cromático · bordô, areia & neutros",
-            typeTag: "TIPOGRAFIA",
-            typeCaption: "Escala tipográfica · hierarquia clara",
-            specimenTitle: "Título",
-            specimenSubtitle: "Subtítulo",
-            specimenBody: "corpo de texto · 01",
-            compTag: "COMPOSIÇÃO",
-            compCaption: "Grid & ritmo · post para redes",
+        work: {
+            label: "Projetos",
+            script: "trabalhos selecionados",
+            title: "Projetos",
+            note: "Três projetos de estudo de identidade visual — do conceito à aplicação em peças reais.",
+            projects: {
+                savora: {
+                    lede: "Identidade para um restaurante de clima afetivo, com referências de savana. Uma linguagem única que vai do letreiro da fachada à embalagem na mão do cliente.",
+                    note: "Cada ponto de contato — do copo ao lacre — reforça a mesma marca, sem ruído.",
+                },
+                infinider: {
+                    lede: "Marca e papelaria para uma empresa de gestão de restaurantes. Um monograma “IN” entrelaçado traduz a ideia de conexão e continuidade.",
+                    note: "Do símbolo ao verso do cartão: um sistema simples, aplicado com consistência.",
+                },
+                mundoPetFeliz: {
+                    lede: "Identidade para um pet shop de bairro, com tom acolhedor e divertido. Da fachada ao uniforme, uma marca fácil de reconhecer e de gostar.",
+                    note: "Cores quentes e um emblema de patinha dão à marca um ar amigável em cada aplicação.",
+                },
+            },
         },
         timeline: {
             label: "Trajetória",
