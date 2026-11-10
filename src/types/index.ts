@@ -26,9 +26,35 @@ export interface Certification {
     dateKey: string;
 }
 
-export interface Swatch {
+/** Uma peça de um projeto: imagem (em /projetos/<slug>/) + alt descritivo. */
+export interface ProjectImage {
+    src: string;
+    alt: string;
+}
+
+export type ProjectRowType = "full" | "pair" | "offset";
+
+/**
+ * Uma linha do showcase (ritmo assimétrico):
+ * - full: uma peça em largura total
+ * - pair: duas peças lado a lado
+ * - offset: peça maior + frase (noteKey → i18n) + peça menor
+ */
+export interface ProjectRow {
+    type: ProjectRowType;
+    images: ProjectImage[];
+    noteKey?: string;
+}
+
+/** Projeto de estudo. name/segment/deliverables são literais; ledeKey → i18n. */
+export interface Project {
+    slug: string;
+    index: string;
     name: string;
-    hex: string;
+    segment: string;
+    deliverables: string;
+    ledeKey: string;
+    rows: ProjectRow[];
 }
 
 /** key → contact.facts.<key> in i18n */

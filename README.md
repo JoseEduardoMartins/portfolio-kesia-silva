@@ -49,9 +49,9 @@ src/
   data/                    # listas estruturadas (nav, serviços, paleta, certs...)
   types/                   # tipos compartilhados
   components/
-    atoms/                 # Button, Tag, Chip, Swatch, BrandMark, SkipLink, Highlight
-    molecules/             # Brand, SectionLabel, NavLinks, HeroSpec, Marquee, cards, Swatches, Specimen, Composition
-    organisms/             # Header, Hero, About, Services, VisualSystem, Timeline, Contact, Footer
+    atoms/                 # Button, Tag, Chip, BrandMark, SkipLink, Highlight
+    molecules/             # Brand, SectionLabel, NavLinks, HeroSpec, Marquee, cards, ProjectShowcase
+    organisms/             # Header, Hero, About, Services, Work, Timeline, Contact, Footer
     templates/Layout/      # SkipLink + Header + <main> + Footer
     Reveal/                # wrapper de scroll reveal
   pages/Home/              # compõe os organisms na ordem da página
@@ -59,8 +59,12 @@ src/
 
 ## Personalizar
 
-- **Portfólio real:** a seção *Linguagem* (`#trabalho`, `VisualSystem`) usa peças
-  abstratas como placeholder. Troque os tiles por imagens reais dos projetos.
-- **Textos:** edite `src/i18n/locales/pt-br.ts`. Para adicionar idiomas, crie novos
-  locales e registre-os em `src/i18n/locales/index.ts`.
+- **Projetos:** a seção *Projetos* (`#trabalho`, `Work`) apresenta os trabalhos em
+  ritmo assimétrico. A estrutura (peças e layout) fica em `src/data/projects.ts`;
+  as imagens em `public/projetos/<slug>/`. Para adicionar/atualizar peças, coloque
+  os PNGs de origem em `~/Downloads/PORTIFOLIO`, ajuste o mapa em
+  `scripts/optimize-images.py` e rode `python3 -I scripts/optimize-images.py` (gera WebP).
+- **Textos:** edite `src/i18n/locales/pt-br.ts` (ledes e notas dos projetos em
+  `work.projects.*`). Para adicionar idiomas, crie novos locales e registre-os em
+  `src/i18n/locales/index.ts`.
 - **Contato:** ajuste `VITE_EMAIL` e `VITE_URL_LINKEDIN` no `.env`.

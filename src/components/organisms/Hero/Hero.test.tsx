@@ -9,6 +9,6 @@ test("Hero mostra nome e CTAs", () => {
         screen.getByRole("link", { name: "Vamos criar juntos" })
     ).toHaveAttribute("href", "#contato");
     expect(
-        screen.getByRole("link", { name: "Ver linguagem visual" })
+        screen.getByRole("link", { name: "Ver projetos" })
     ).toHaveAttribute("href", "#trabalho");
 });
