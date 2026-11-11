@@ -10,7 +10,7 @@ const Brand = () => {
             aria-label={`${t("hero.firstName")} ${t("hero.lastName")} — início`}
         >
             <BrandMark />
-            <span className="font-display font-bold text-[1.05rem] tracking-[-0.02em]">
+            <span className="font-mono text-[0.8rem] uppercase tracking-[0.14em]">
                 {t("hero.firstName")} {t("hero.lastName")}
             </span>
         </a>

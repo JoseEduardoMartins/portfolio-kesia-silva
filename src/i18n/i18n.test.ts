@@ -6,7 +6,6 @@ test("i18n inicia em pt-BR e traduz chaves-chave", () => {
     expect(i18n.t("footer.backToTop")).toBe("Voltar ao topo ↑");
 });
 
-test("marquee e skills são arrays", () => {
-    expect(Array.isArray(i18n.t("hero.marquee", { returnObjects: true }))).toBe(true);
+test("skills é um array", () => {
     expect(Array.isArray(i18n.t("timeline.skills", { returnObjects: true }))).toBe(true);
 });

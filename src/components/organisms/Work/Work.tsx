@@ -11,7 +11,7 @@ const Work = () => {
         <section
             id="trabalho"
             aria-labelledby="work-title"
-            className="bg-paper px-[var(--gut)] py-[var(--sec)]"
+            className="px-[var(--gut)] py-[var(--sec)]"
         >
             <Reveal>
                 <SectionLabel index="03">{t("work.label")}</SectionLabel>

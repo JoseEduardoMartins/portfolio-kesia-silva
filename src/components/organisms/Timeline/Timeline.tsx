@@ -4,7 +4,6 @@ import ExperienceEntry from "@/components/molecules/ExperienceEntry";
 import CertCard from "@/components/molecules/CertCard";
 import Chip from "@/components/atoms/Chip";
 import ScriptLabel from "@/components/atoms/ScriptLabel";
-import SelectionFrame from "@/components/atoms/SelectionFrame";
 import Reveal from "@/components/Reveal";
 import experiences from "@/data/experiences";
 import certifications from "@/data/certifications";
@@ -31,7 +30,6 @@ const Timeline = () => {
                 >
                     {t("timeline.title")}
                 </h2>
-                <SelectionFrame />
             </Reveal>
 
             <div className="grid grid-cols-[1.4fr_1fr] gap-[clamp(2rem,6vw,5rem)] items-start max-[900px]:grid-cols-1">
