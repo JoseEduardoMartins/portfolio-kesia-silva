@@ -5,28 +5,26 @@ export default {
     theme: {
         extend: {
             colors: {
-                ink: { DEFAULT: "#26191B", 80: "#352528" },
-                paper: "#F1E8D9",
-                coral: "#6A2230",
-                teal: "#9C8A79",
-                gold: "#C6B396",
-                muted: "#8A7B6F",
-                line: { DEFAULT: "#DED2BE", dark: "rgba(241,232,217,0.14)" },
+                // Direção C — Lookbook escuro. Nomes mantidos; valores no esquema escuro.
+                ink: { DEFAULT: "#16110F", 80: "#1E1815" }, // fundo / painel
+                paper: "#EFE7DA", // creme (texto/claro)
+                coral: "#C8A86A", // acento dourado (nome herdado)
+                teal: "#A79A88", // neutro suave
+                gold: "#C8A86A",
+                muted: "#A79A88", // texto suave sobre escuro
+                line: {
+                    DEFAULT: "rgba(239,231,218,0.14)",
+                    dark: "rgba(239,231,218,0.14)",
+                },
             },
             fontFamily: {
-                display: ['"Bricolage Grotesque"', '"Trebuchet MS"', "sans-serif"],
+                display: ['"Playfair Display"', "Georgia", "serif"],
                 body: ['"Inter"', "system-ui", "sans-serif"],
                 mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
-                script: ['"Caveat"', '"Segoe Script"', "cursive"],
+                script: ['"Playfair Display"', "Georgia", "serif"],
             },
             transitionTimingFunction: {
                 brand: "cubic-bezier(0.2, 0.7, 0.2, 1)",
-            },
-            keyframes: {
-                "scroll-x": { to: { transform: "translateX(-50%)" } },
-            },
-            animation: {
-                marquee: "scroll-x 34s linear infinite",
             },
         },
     },
