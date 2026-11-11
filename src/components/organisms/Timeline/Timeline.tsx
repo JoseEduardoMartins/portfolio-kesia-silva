@@ -5,12 +5,15 @@ import CertCard from "@/components/molecules/CertCard";
 import Chip from "@/components/atoms/Chip";
 import ScriptLabel from "@/components/atoms/ScriptLabel";
 import Reveal from "@/components/Reveal";
+import useReveal from "@/hooks/useReveal";
 import experiences from "@/data/experiences";
 import certifications from "@/data/certifications";
 
 const Timeline = () => {
     const { t } = useTranslation();
     const skills = t("timeline.skills", { returnObjects: true }) as string[];
+    const expRef = useReveal<HTMLOListElement>();
+    const certRef = useReveal<HTMLUListElement>();
     return (
         <section
             id="trajetoria"
@@ -20,7 +23,10 @@ const Timeline = () => {
             <Reveal>
                 <SectionLabel index="04">{t("timeline.label")}</SectionLabel>
             </Reveal>
-            <Reveal className="relative inline-block mb-[clamp(2rem,5vw,3.5rem)]">
+            <Reveal
+                delay={90}
+                className="relative inline-block mb-[clamp(2rem,5vw,3.5rem)]"
+            >
                 <ScriptLabel className="block ml-1 mb-[-0.2em]">
                     {t("timeline.script")}
                 </ScriptLabel>
@@ -34,6 +40,8 @@ const Timeline = () => {
 
             <div className="grid grid-cols-[1.4fr_1fr] gap-[clamp(2rem,6vw,5rem)] items-start max-[900px]:grid-cols-1">
                 <ol
+                    ref={expRef}
+                    data-stagger
                     className="list-none m-0 p-0"
                     aria-label="Experiência profissional"
                 >
@@ -42,6 +50,8 @@ const Timeline = () => {
                     ))}
                 </ol>
                 <ul
+                    ref={certRef}
+                    data-stagger
                     className="list-none m-0 p-0 flex flex-col gap-[0.8rem]"
                     aria-label="Cursos e certificações"
                 >

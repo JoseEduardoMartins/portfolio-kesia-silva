@@ -4,10 +4,12 @@ import ServiceCard from "@/components/molecules/ServiceCard";
 import ScriptLabel from "@/components/atoms/ScriptLabel";
 import Grain from "@/components/atoms/Grain";
 import Reveal from "@/components/Reveal";
+import useReveal from "@/hooks/useReveal";
 import services from "@/data/services";
 
 const Services = () => {
     const { t } = useTranslation();
+    const cardsRef = useReveal<HTMLUListElement>();
     return (
         <section
             id="servicos"
@@ -20,7 +22,10 @@ const Services = () => {
                     {t("services.label")}
                 </SectionLabel>
             </Reveal>
-            <Reveal className="relative inline-block mb-[clamp(2rem,5vw,3.5rem)]">
+            <Reveal
+                delay={90}
+                className="relative inline-block mb-[clamp(2rem,5vw,3.5rem)]"
+            >
                 <ScriptLabel className="block ml-1 mb-[-0.2em]">
                     {t("services.script")}
                 </ScriptLabel>
@@ -31,7 +36,11 @@ const Services = () => {
                     {t("services.title")}
                 </h2>
             </Reveal>
-            <ul className="list-none m-0 p-0 grid grid-cols-4 border-t border-l border-line-dark max-[980px]:grid-cols-2 max-[520px]:grid-cols-1">
+            <ul
+                ref={cardsRef}
+                data-stagger
+                className="list-none m-0 p-0 grid grid-cols-4 border-t border-l border-line-dark max-[980px]:grid-cols-2 max-[520px]:grid-cols-1"
+            >
                 {services.map((s) => (
                     <ServiceCard
                         key={s.key}

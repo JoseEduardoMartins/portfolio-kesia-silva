@@ -3,6 +3,7 @@ import SectionLabel from "@/components/molecules/SectionLabel";
 import ScriptLabel from "@/components/atoms/ScriptLabel";
 import Grain from "@/components/atoms/Grain";
 import Reveal from "@/components/Reveal";
+import useReveal from "@/hooks/useReveal";
 
 const items = [
     { n: "01", href: "#sobre", k: "contents.items.sobre" },
@@ -14,6 +15,7 @@ const items = [
 
 const Contents = () => {
     const { t } = useTranslation();
+    const listRef = useReveal<HTMLUListElement>();
     return (
         <section
             id="indice"
@@ -26,7 +28,10 @@ const Contents = () => {
                     {t("contents.label")}
                 </SectionLabel>
             </Reveal>
-            <Reveal className="relative inline-block mb-[clamp(2rem,5vw,3.5rem)]">
+            <Reveal
+                delay={90}
+                className="relative inline-block mb-[clamp(2rem,5vw,3.5rem)]"
+            >
                 <ScriptLabel className="block ml-1 mb-[-0.2em]">
                     {t("contents.script")}
                 </ScriptLabel>
@@ -38,7 +43,11 @@ const Contents = () => {
                 </h2>
             </Reveal>
 
-            <ul className="relative list-none m-0 p-0 border-t border-line-dark">
+            <ul
+                ref={listRef}
+                data-stagger
+                className="relative list-none m-0 p-0 border-t border-line-dark"
+            >
                 {items.map(({ n, href, k }) => (
                     <li key={href}>
                         <a

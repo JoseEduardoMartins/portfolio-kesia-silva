@@ -16,7 +16,10 @@ const Work = () => {
             <Reveal>
                 <SectionLabel index="03">{t("work.label")}</SectionLabel>
             </Reveal>
-            <Reveal className="relative inline-block mb-[clamp(1rem,3vw,2rem)]">
+            <Reveal
+                delay={90}
+                className="relative inline-block mb-[clamp(1rem,3vw,2rem)]"
+            >
                 <ScriptLabel className="block ml-1 mb-[-0.2em]">
                     {t("work.script")}
                 </ScriptLabel>
@@ -27,7 +30,11 @@ const Work = () => {
                     {t("work.title")}
                 </h2>
             </Reveal>
-            <Reveal as="p" className="max-w-[40ch] text-muted text-[0.95rem] mb-[clamp(1rem,3vw,2rem)]">
+            <Reveal
+                as="p"
+                delay={150}
+                className="max-w-[40ch] text-muted text-[0.95rem] mb-[clamp(1rem,3vw,2rem)]"
+            >
                 {t("work.note")}
             </Reveal>
 
