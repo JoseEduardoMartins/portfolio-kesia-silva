@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import SectionLabel from "@/components/molecules/SectionLabel";
 import ServiceCard from "@/components/molecules/ServiceCard";
 import ScriptLabel from "@/components/atoms/ScriptLabel";
-import SelectionFrame from "@/components/atoms/SelectionFrame";
 import Grain from "@/components/atoms/Grain";
 import Reveal from "@/components/Reveal";
 import services from "@/data/services";
@@ -31,7 +30,6 @@ const Services = () => {
                 >
                     {t("services.title")}
                 </h2>
-                <SelectionFrame light />
             </Reveal>
             <ul className="list-none m-0 p-0 grid grid-cols-4 border-t border-l border-line-dark max-[980px]:grid-cols-2 max-[520px]:grid-cols-1">
                 {services.map((s) => (

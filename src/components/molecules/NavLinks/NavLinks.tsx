@@ -13,7 +13,7 @@ const NavLinks = () => {
                     <a
                         key={item.href}
                         href={item.href}
-                        className="text-ink font-medium border border-ink rounded-full px-4 py-[0.4rem] transition-[background-color,color] duration-200 ease-brand hover:bg-ink hover:text-paper"
+                        className="font-mono text-[0.78rem] uppercase tracking-[0.1em] text-coral border border-coral rounded-full px-4 py-[0.4rem] transition-[background-color,color] duration-200 ease-brand hover:bg-coral hover:text-ink"
                     >
                         {t(item.labelKey)}
                     </a>
@@ -21,7 +21,7 @@ const NavLinks = () => {
                     <a
                         key={item.href}
                         href={item.href}
-                        className="text-[0.9rem] text-muted transition-colors duration-200 ease-brand hover:text-ink max-[720px]:hidden"
+                        className="font-mono text-[0.78rem] uppercase tracking-[0.1em] text-muted transition-colors duration-200 ease-brand hover:text-coral max-[720px]:hidden"
                     >
                         {t(item.labelKey)}
                     </a>

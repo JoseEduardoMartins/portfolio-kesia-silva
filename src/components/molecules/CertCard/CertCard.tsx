@@ -6,7 +6,7 @@ interface CertCardProps {
 
 // titleKey/dateKey carry literal text (see data/certifications.ts).
 const CertCard = ({ by, titleKey, dateKey }: CertCardProps) => (
-    <li className="bg-ink text-paper px-[1.4rem] py-5 rounded-[0.9rem] flex flex-col gap-1">
+    <li className="bg-ink-80 text-paper px-[1.4rem] py-5 rounded-[0.9rem] border border-line flex flex-col gap-1">
         <span className="font-mono text-[0.72rem] text-gold tracking-[0.05em] uppercase">
             {by}
         </span>

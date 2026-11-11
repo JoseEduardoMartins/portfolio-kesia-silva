@@ -13,7 +13,7 @@ const ExperienceEntry = ({ entryKey }: { entryKey: string }) => {
                 <p className="text-[0.9rem] text-muted mb-[0.7rem]">
                     {t(`${base}.org`)}
                 </p>
-                <p className="text-[0.95rem] text-ink/80">{t(`${base}.description`)}</p>
+                <p className="text-[0.95rem] text-paper/80">{t(`${base}.description`)}</p>
             </div>
         </li>
     );

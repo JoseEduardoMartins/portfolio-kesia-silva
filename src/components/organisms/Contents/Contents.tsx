@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import SectionLabel from "@/components/molecules/SectionLabel";
 import ScriptLabel from "@/components/atoms/ScriptLabel";
-import SelectionFrame from "@/components/atoms/SelectionFrame";
 import Grain from "@/components/atoms/Grain";
 import Reveal from "@/components/Reveal";
 
@@ -37,7 +36,6 @@ const Contents = () => {
                 >
                     {t("contents.title")}
                 </h2>
-                <SelectionFrame light />
             </Reveal>
 
             <ul className="relative list-none m-0 p-0 border-t border-line-dark">
