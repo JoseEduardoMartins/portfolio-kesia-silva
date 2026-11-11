@@ -26,10 +26,11 @@ export interface Certification {
     dateKey: string;
 }
 
-/** Uma peça de um projeto: imagem (em /projetos/<slug>/) + alt descritivo. */
+/** Uma peça de um projeto: imagem (em /projetos/<slug>/) + alt + legenda curta. */
 export interface ProjectImage {
     src: string;
     alt: string;
+    caption?: string;
 }
 
 export type ProjectRowType = "full" | "pair" | "offset";

@@ -9,15 +9,20 @@ const Figure = ({ image }: { image: ProjectImage }) => (
             alt={image.alt}
             loading="lazy"
             decoding="async"
-            className="block w-full h-auto rounded-[4px]"
+            className="block w-full h-auto rounded-[3px] shadow-[0_30px_70px_-40px_rgba(0,0,0,0.85)]"
         />
+        {image.caption && (
+            <figcaption className="mt-[0.9rem] font-mono text-[0.68rem] uppercase tracking-[0.18em] text-muted">
+                {image.caption}
+            </figcaption>
+        )}
     </figure>
 );
 
 const Row = ({ row, note }: { row: ProjectRow; note?: string }) => {
     if (row.type === "full") {
         return (
-            <Reveal className="mb-[clamp(1.6rem,4vw,2.75rem)]">
+            <Reveal className="mb-[clamp(2rem,5vw,3.5rem)]">
                 <Figure image={row.images[0]} />
             </Reveal>
         );
@@ -25,7 +30,7 @@ const Row = ({ row, note }: { row: ProjectRow; note?: string }) => {
 
     if (row.type === "pair") {
         return (
-            <Reveal className="mb-[clamp(1.6rem,4vw,2.75rem)] grid grid-cols-2 gap-[clamp(0.8rem,2vw,1.4rem)] max-[720px]:grid-cols-1">
+            <Reveal className="mb-[clamp(2rem,5vw,3.5rem)] grid grid-cols-2 gap-[clamp(1.2rem,3vw,2.2rem)] max-[720px]:grid-cols-1">
                 {row.images.map((image) => (
                     <Figure key={image.src} image={image} />
                 ))}
@@ -33,14 +38,14 @@ const Row = ({ row, note }: { row: ProjectRow; note?: string }) => {
         );
     }
 
-    // offset: imagem maior + frase + (opcional) imagem menor
+    // offset: imagem maior + frase em destaque dourado + (opcional) imagem menor
     const [lead, secondary] = row.images;
     return (
-        <Reveal className="mb-[clamp(1.6rem,4vw,2.75rem)] grid grid-cols-[1.4fr_1fr] gap-[clamp(0.8rem,2vw,1.4rem)] items-center max-[720px]:grid-cols-1">
+        <Reveal className="mb-[clamp(2rem,5vw,3.5rem)] grid grid-cols-[1.35fr_1fr] gap-[clamp(1.2rem,3vw,2.2rem)] items-center max-[720px]:grid-cols-1">
             <Figure image={lead} />
             <div>
                 {note && (
-                    <p className="max-w-[28ch] text-ink text-[1.02rem] leading-relaxed mb-[clamp(0.8rem,2vw,1.4rem)]">
+                    <p className="font-display italic text-coral text-[clamp(1.3rem,2vw,1.6rem)] leading-[1.5] mb-[clamp(1rem,2.5vw,1.6rem)]">
                         {note}
                     </p>
                 )}
@@ -53,25 +58,25 @@ const Row = ({ row, note }: { row: ProjectRow; note?: string }) => {
 const ProjectShowcase = ({ project }: { project: Project }) => {
     const { t } = useTranslation();
     return (
-        <article className="pt-[clamp(3rem,7vw,6rem)]">
-            <Reveal className="flex flex-wrap justify-between items-end gap-x-8 gap-y-3 pb-[clamp(1.25rem,3vw,2rem)]">
+        <article className="pt-[clamp(3rem,7vw,5rem)]">
+            <Reveal className="flex flex-wrap justify-between items-end gap-x-8 gap-y-3 pb-[clamp(1rem,2.5vw,1.5rem)]">
                 <div>
-                    <div className="font-mono text-coral text-[0.8rem] tracking-[0.2em]">
+                    <div className="font-mono text-coral text-[0.8rem] tracking-[0.25em] uppercase">
                         {project.index} — Identidade visual
                     </div>
-                    <h3 className="font-display font-extrabold text-[clamp(2.4rem,1.5rem+5vw,4.5rem)] tracking-[-0.03em] leading-[0.95]">
+                    <h3 className="font-display text-[clamp(2.8rem,1.5rem+5vw,5.5rem)] leading-[0.95] mt-[0.4rem]">
                         {project.name}
                     </h3>
                 </div>
-                <div className="font-mono text-[0.78rem] text-muted leading-[1.9] text-right max-[720px]:text-left">
-                    <div className="text-ink font-medium">{project.segment}</div>
+                <div className="font-mono text-[0.74rem] uppercase tracking-[0.1em] text-muted leading-[1.9] text-right max-[720px]:text-left">
+                    <div className="text-paper">{project.segment}</div>
                     <div>{project.deliverables}</div>
                 </div>
             </Reveal>
 
             <Reveal
                 as="p"
-                className="max-w-[34rem] text-ink text-[1.08rem] leading-relaxed pb-[clamp(1.5rem,4vw,2.5rem)]"
+                className="max-w-[40rem] font-display italic text-[clamp(1.3rem,1rem+1vw,1.8rem)] leading-[1.5] pb-[clamp(2rem,5vw,3rem)]"
             >
                 {t(project.ledeKey)}
             </Reveal>
