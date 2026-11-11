@@ -1,60 +1,47 @@
 import { useTranslation } from "react-i18next";
-import Tag from "@/components/atoms/Tag";
-import HeroSpec from "@/components/molecules/HeroSpec";
 import Button from "@/components/atoms/Button";
 import Grain from "@/components/atoms/Grain";
-import ScriptLabel from "@/components/atoms/ScriptLabel";
-import Marquee from "@/components/molecules/Marquee";
 
 const Hero = () => {
     const { t } = useTranslation();
     return (
         <section
             aria-labelledby="hero-name"
-            className="relative bg-ink text-paper px-[var(--gut)] pt-[clamp(3rem,8vw,6rem)] min-h-[92vh] flex flex-col justify-between overflow-hidden"
+            className="relative px-[var(--gut)] pt-[clamp(7rem,14vw,11rem)] pb-[clamp(4rem,9vw,7rem)] text-center overflow-hidden"
         >
-            <div className="hero-grid" aria-hidden="true" />
             <Grain />
-
-            <div className="relative flex flex-wrap gap-[0.6rem] text-paper [&>*]:opacity-75">
-                <Tag>{t("hero.tagRole")}</Tag>
-                <Tag>{t("hero.tagLocation")}</Tag>
-                <Tag>{t("hero.tagAvailable")}</Tag>
-            </div>
-
-            <div className="relative my-[clamp(1.5rem,4vw,3rem)]">
-                <ScriptLabel className="block ml-[0.15em] mb-[-0.25em] rotate-[-4deg] origin-left">
-                    {t("hero.script")}
-                </ScriptLabel>
+            <div className="relative mx-auto max-w-[62rem]">
+                <p className="font-mono text-[0.72rem] uppercase tracking-[0.35em] text-coral">
+                    {t("hero.kicker")}
+                </p>
                 <h1
                     id="hero-name"
-                    className="font-extrabold tracking-[-0.045em] flex flex-col text-[clamp(4.5rem,21vw,20rem)]"
+                    className="font-display mt-[clamp(1.2rem,3vw,2rem)] text-[clamp(3.4rem,10vw,8.5rem)] leading-[0.98]"
                 >
-                    <span className="block leading-[0.86]">{t("hero.firstName")}</span>
-                    <span className="block leading-[0.86] text-coral after:content-['◦'] after:text-teal after:text-[0.35em] after:align-super after:ml-[0.15em]">
-                        {t("hero.lastName")}
-                    </span>
+                    {t("hero.firstName")}{" "}
+                    <em className="italic text-coral">{t("hero.lastName")}</em>
                 </h1>
-            </div>
-
-            <div className="relative grid grid-cols-[1.3fr_1fr] gap-[clamp(1.5rem,4vw,3rem)] items-end pb-[clamp(2rem,5vw,3.5rem)] max-[760px]:grid-cols-1 max-[760px]:items-start">
-                <p className="text-[clamp(1.15rem,1rem+0.9vw,1.6rem)] leading-[1.4] max-w-[30ch]">
+                <p className="mt-[clamp(1rem,2vw,1.4rem)] text-muted text-[1.02rem] tracking-[0.01em]">
+                    {t("hero.subtitle")}
+                </p>
+                <p className="mx-auto mt-[clamp(2rem,5vw,3rem)] max-w-[36ch] font-display italic text-[clamp(1.3rem,1rem+1.6vw,2rem)] leading-[1.45]">
                     {t("hero.statementPre")}
-                    <em className="text-gold italic">{t("hero.statementEm")}</em>
+                    <span className="text-coral">{t("hero.statementEm")}</span>
                     {t("hero.statementPost")}
                 </p>
-                <HeroSpec />
-                <div className="col-span-full flex flex-wrap gap-[0.8rem] mt-2">
+                <div className="mt-[clamp(2.2rem,5vw,3rem)] flex flex-wrap gap-[0.8rem] justify-center">
                     <Button href="#contato" variant="solid">
                         {t("hero.ctaPrimary")}
                     </Button>
-                    <Button href="#trabalho" variant="ghost">
+                    <Button href="#trabalho" variant="outline">
                         {t("hero.ctaSecondary")}
                     </Button>
                 </div>
             </div>
-
-            <Marquee />
+            <span
+                aria-hidden="true"
+                className="block mx-auto mt-[clamp(3rem,7vw,5rem)] w-px h-[3rem] bg-gradient-to-b from-coral to-transparent"
+            />
         </section>
     );
 };
