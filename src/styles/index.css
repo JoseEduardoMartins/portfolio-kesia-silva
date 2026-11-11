@@ -101,6 +101,50 @@
         opacity: 1;
         transform: none;
     }
+
+    /* Variante "unveil" das peças dos projetos: surgem com leve escala */
+    .reveal-media[data-reveal] {
+        transform: translateY(24px) scale(1.03);
+    }
+    .reveal-media[data-reveal].is-visible {
+        transform: none;
+    }
+
+    /* Stagger: filhos diretos de um grupo revelado entram em cascata.
+       O container recebe is-visible (via useReveal) sem o fade de bloco. */
+    [data-stagger] > * {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+    }
+    [data-stagger].is-visible > * {
+        opacity: 1;
+        transform: none;
+    }
+    [data-stagger] > *:nth-child(1) {
+        transition-delay: 0ms;
+    }
+    [data-stagger] > *:nth-child(2) {
+        transition-delay: 70ms;
+    }
+    [data-stagger] > *:nth-child(3) {
+        transition-delay: 140ms;
+    }
+    [data-stagger] > *:nth-child(4) {
+        transition-delay: 210ms;
+    }
+    [data-stagger] > *:nth-child(5) {
+        transition-delay: 280ms;
+    }
+    [data-stagger] > *:nth-child(6) {
+        transition-delay: 350ms;
+    }
+    [data-stagger] > *:nth-child(7) {
+        transition-delay: 420ms;
+    }
+    [data-stagger] > *:nth-child(n + 8) {
+        transition-delay: 490ms;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -108,6 +152,14 @@
         scroll-behavior: auto;
     }
     [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    .reveal-media[data-reveal] {
+        transform: none;
+    }
+    [data-stagger] > * {
         opacity: 1;
         transform: none;
         transition: none;
