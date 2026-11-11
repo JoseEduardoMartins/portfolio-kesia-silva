@@ -3,7 +3,6 @@ import Button from "./Button";
 import Highlight from "./Highlight";
 import Grain from "./Grain";
 import ScriptLabel from "./ScriptLabel";
-import SelectionFrame from "./SelectionFrame";
 
 test("Button aplica variante e tamanho e é um link", () => {
     render(
@@ -50,17 +49,4 @@ test("ScriptLabel usa font-script e é decorativo", () => {
     expect(el).toHaveTextContent("oi");
     expect(el.className).toMatch(/font-script/);
     expect(el).toHaveAttribute("aria-hidden", "true");
-});
-
-test("SelectionFrame é decorativo e tem 4 cantos", () => {
-    const { container } = render(<SelectionFrame />);
-    const el = container.firstChild as HTMLElement;
-    expect(el).toHaveClass("handles");
-    expect(el).toHaveAttribute("aria-hidden", "true");
-    expect(el.querySelectorAll(".handle-corner")).toHaveLength(4);
-});
-
-test("SelectionFrame light adiciona a variante clara", () => {
-    const { container } = render(<SelectionFrame light />);
-    expect(container.firstChild).toHaveClass("handles--light");
 });
