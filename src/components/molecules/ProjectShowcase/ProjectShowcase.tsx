@@ -4,13 +4,16 @@ import type { Project, ProjectImage, ProjectRow } from "@/types";
 
 const Figure = ({ image }: { image: ProjectImage }) => (
     <figure className="m-0">
-        <img
-            src={image.src}
-            alt={image.alt}
-            loading="lazy"
-            decoding="async"
-            className="block w-full h-auto rounded-[3px] shadow-[0_30px_70px_-40px_rgba(0,0,0,0.85)]"
-        />
+        {/* O frame recorta o zoom; a sombra fica no wrapper, fora do recorte */}
+        <div className="group overflow-hidden rounded-[3px] shadow-[0_30px_70px_-40px_rgba(0,0,0,0.85)]">
+            <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+                className="block w-full h-auto transition-transform duration-700 ease-brand group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+            />
+        </div>
         {image.caption && (
             <figcaption className="mt-[0.9rem] font-mono text-[0.68rem] uppercase tracking-[0.18em] text-muted">
                 {image.caption}
@@ -22,7 +25,7 @@ const Figure = ({ image }: { image: ProjectImage }) => (
 const Row = ({ row, note }: { row: ProjectRow; note?: string }) => {
     if (row.type === "full") {
         return (
-            <Reveal className="mb-[clamp(2rem,5vw,3.5rem)]">
+            <Reveal className="reveal-media mb-[clamp(2rem,5vw,3.5rem)]">
                 <Figure image={row.images[0]} />
             </Reveal>
         );
@@ -30,7 +33,7 @@ const Row = ({ row, note }: { row: ProjectRow; note?: string }) => {
 
     if (row.type === "pair") {
         return (
-            <Reveal className="mb-[clamp(2rem,5vw,3.5rem)] grid grid-cols-2 gap-[clamp(1.2rem,3vw,2.2rem)] max-[720px]:grid-cols-1">
+            <Reveal className="reveal-media mb-[clamp(2rem,5vw,3.5rem)] grid grid-cols-2 gap-[clamp(1.2rem,3vw,2.2rem)] max-[720px]:grid-cols-1">
                 {row.images.map((image) => (
                     <Figure key={image.src} image={image} />
                 ))}
@@ -41,7 +44,7 @@ const Row = ({ row, note }: { row: ProjectRow; note?: string }) => {
     // offset: imagem maior + frase em destaque dourado + (opcional) imagem menor
     const [lead, secondary] = row.images;
     return (
-        <Reveal className="mb-[clamp(2rem,5vw,3.5rem)] grid grid-cols-[1.35fr_1fr] gap-[clamp(1.2rem,3vw,2.2rem)] items-center max-[720px]:grid-cols-1">
+        <Reveal className="reveal-media mb-[clamp(2rem,5vw,3.5rem)] grid grid-cols-[1.35fr_1fr] gap-[clamp(1.2rem,3vw,2.2rem)] items-center max-[720px]:grid-cols-1">
             <Figure image={lead} />
             <div>
                 {note && (
@@ -76,6 +79,7 @@ const ProjectShowcase = ({ project }: { project: Project }) => {
 
             <Reveal
                 as="p"
+                delay={90}
                 className="max-w-[40rem] font-display italic text-[clamp(1.3rem,1rem+1vw,1.8rem)] leading-[1.5] pb-[clamp(2rem,5vw,3rem)]"
             >
                 {t(project.ledeKey)}

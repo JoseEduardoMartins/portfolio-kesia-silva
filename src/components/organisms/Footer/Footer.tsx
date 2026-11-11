@@ -11,7 +11,10 @@ const Footer = () => {
             <p>
                 © {year} {t("footer.copyright")}
             </p>
-            <a href="#top" className="hover:text-paper">
+            <a
+                href="#top"
+                className="transition-colors duration-200 ease-brand hover:text-paper"
+            >
                 {t("footer.backToTop")}
             </a>
         </footer>
