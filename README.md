@@ -6,6 +6,10 @@ Aplicação single-page em **Vite + React + TypeScript + Tailwind CSS**, com
 textos em **react-i18next** (pt-BR) e componentes organizados em **Atomic
 Design**.
 
+Direção visual **"lookbook escuro"**: fundo espresso, acento dourado, títulos em
+*Playfair Display* (serifada) e rótulos em *IBM Plex Mono*. As peças dos projetos
+aparecem grandes sobre o escuro, no ritmo cheio → par → bloco com citação.
+
 ## Stack
 
 - [Vite](https://vitejs.dev/) + [React 18](https://react.dev/) + TypeScript
@@ -42,15 +46,15 @@ Copie `.env.example` para `.env` e ajuste conforme necessário:
 src/
   main.tsx                 # entry (importa ./i18n e ./styles)
   App.tsx                  # <Layout><Home/></Layout>
-  styles/index.css         # @tailwind + tokens (CSS vars) + efeitos (marquee, máscaras, reveal)
+  styles/index.css         # @tailwind + tokens (CSS vars) + efeitos (grão, highlight, reveal)
   config/                  # e-mail / linkedin via VITE_*
   i18n/                    # react-i18next + locales/pt-br.ts (todos os textos)
   hooks/                   # useReveal (scroll reveal), useCurrentYear
-  data/                    # listas estruturadas (nav, serviços, paleta, certs...)
+  data/                    # listas estruturadas (nav, serviços, projetos, certs...)
   types/                   # tipos compartilhados
   components/
-    atoms/                 # Button, Tag, Chip, BrandMark, SkipLink, Highlight
-    molecules/             # Brand, SectionLabel, NavLinks, HeroSpec, Marquee, cards, ProjectShowcase
+    atoms/                 # Button, Chip, BrandMark, SkipLink, Highlight, ScriptLabel, Grain
+    molecules/             # Brand, SectionLabel, NavLinks, cards, ProjectShowcase
     organisms/             # Header, Hero, About, Services, Work, Timeline, Contact, Footer
     templates/Layout/      # SkipLink + Header + <main> + Footer
     Reveal/                # wrapper de scroll reveal
