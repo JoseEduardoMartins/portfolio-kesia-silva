@@ -47,13 +47,17 @@ export interface ProjectRow {
     noteKey?: string;
 }
 
-/** Projeto de estudo. name/segment/deliverables são literais; ledeKey → i18n. */
+/** Projeto de estudo. name/segment/deliverables/kind são literais; ledeKey → i18n. */
 export interface Project {
     slug: string;
     index: string;
     name: string;
     segment: string;
     deliverables: string;
+    /** Rótulo acima do título. Padrão: "Identidade visual". */
+    kind?: string;
+    /** "carousel" exibe as peças como carrossel deslizante; padrão é o lookbook em linhas. */
+    layout?: "carousel";
     ledeKey: string;
     rows: ProjectRow[];
 }
