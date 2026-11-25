@@ -111,7 +111,7 @@ const ptBr = {
                     note: "Tons de azul e creme e um emblema de patinha dão à marca um ar amigável em cada aplicação.",
                 },
                 nutricao: {
-                    lede: "Série de posts para uma nutricionista que descomplica a relação com a comida. Sem terrorismo alimentar, sem dieta de proibições — o equilíbrio como prato principal.",
+                    lede: "Carrossel para uma nutricionista que descomplica a relação com a comida. Sem terrorismo alimentar, sem dieta de proibições — o equilíbrio como prato principal.",
                     note: "Tipografia editorial e colagens de comida real: a mensagem séria entra leve, post a post.",
                 },
                 pearl: {

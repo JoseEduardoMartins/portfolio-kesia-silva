@@ -56,8 +56,6 @@ export interface Project {
     deliverables: string;
     /** Rótulo acima do título. Padrão: "Identidade visual". */
     kind?: string;
-    /** "carousel" exibe as peças como carrossel deslizante; padrão é o lookbook em linhas. */
-    layout?: "carousel";
     ledeKey: string;
     rows: ProjectRow[];
 }
