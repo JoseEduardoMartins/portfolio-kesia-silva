@@ -50,24 +50,24 @@ const ptBr = {
             title: "O que eu faço",
             items: {
                 s01: {
-                    title: "Identidade & Branding",
+                    title: "Identidade Visual",
                     description:
-                        "Construção de sistemas visuais coerentes, do conceito às regras de aplicação da marca.",
+                        "Criação de identidades visuais com personalidade, combinando cores, tipografia e elementos gráficos que representam a essência de cada marca.",
                 },
                 s02: {
-                    title: "Design de Logotipos",
+                    title: "Criação de Logotipos",
                     description:
-                        "Marcas e monogramas com personalidade, versáteis para o digital e o impresso.",
+                        "Desenvolvimento de logos criativas, modernas e marcantes, pensadas para transmitir a identidade e os valores de cada negócio.",
                 },
                 s03: {
-                    title: "Conteúdo para Redes",
+                    title: "Posts para Instagram",
                     description:
-                        "Publicações e campanhas padronizadas, com estética consistente e tom de voz alinhado.",
+                        "Criação de artes personalizadas para redes sociais, com layouts atrativos que valorizam a marca e fortalecem sua presença digital.",
                 },
                 s04: {
                     title: "Apresentações & Slides",
                     description:
-                        "Layouts executivos e educacionais que aliam storytelling à clareza da informação.",
+                        "Desenvolvimento de apresentações visuais organizadas, modernas e profissionais, unindo criatividade e clareza na comunicação.",
                 },
                 s05: {
                     title: "Design Visual & Digital",
@@ -95,19 +95,32 @@ const ptBr = {
             label: "Projetos",
             script: "trabalhos selecionados",
             title: "Projetos",
-            note: "Três projetos de estudo de identidade visual — do conceito à aplicação em peças reais.",
+            note: "Seis projetos — de identidade visual a conteúdo para redes, do conceito à aplicação em peças reais.",
             projects: {
                 savora: {
-                    lede: "Identidade para um restaurante de clima afetivo, com referências de savana. Uma linguagem única que vai do letreiro da fachada à embalagem na mão do cliente.",
+                    lede: "A identidade visual do Savora foi inspirada na savana africana, a partir da conexão entre o nome do restaurante e esse ambiente natural. A logo combina dois elementos marcantes: a árvore e a zebra, representando a natureza, a autenticidade e a personalidade da marca. O objetivo foi criar uma identidade visual única, harmoniosa e memorável.",
                     note: "Cada ponto de contato — do copo ao lacre — reforça a mesma marca, sem ruído.",
                 },
                 infinider: {
-                    lede: "Marca e papelaria para uma empresa de gestão de restaurantes. Um monograma “IN” entrelaçado traduz a ideia de conexão e continuidade.",
+                    lede: "A identidade visual do Infinider, uma plataforma de gestão de restaurantes, foi desenvolvida com o objetivo de transmitir modernidade, inovação e praticidade. A criação da logo surgiu da união das letras “IN”, formando um símbolo exclusivo e marcante, que traz personalidade e originalidade à marca. O resultado é uma identidade visual moderna e profissional, que representa a proposta de oferecer soluções inteligentes para a gestão de restaurantes.",
                     note: "Do símbolo ao verso do cartão: um sistema simples, aplicado com consistência.",
+                    app: "O mesmo monograma IN vira ícone de app, pronto para a tela inicial.",
                 },
                 mundoPetFeliz: {
-                    lede: "Identidade para um pet shop de bairro, com tom acolhedor e divertido. Da fachada ao uniforme, uma marca fácil de reconhecer e de gostar.",
-                    note: "Cores quentes e um emblema de patinha dão à marca um ar amigável em cada aplicação.",
+                    lede: "A identidade visual do Mundo Pet Feliz foi criada para transmitir carinho, confiança e acolhimento. A logo traz uma patinha como elemento principal, representando o universo pet. Os tons de azul e creme, combinados com formas suaves e elementos de animais, criam uma marca amigável e harmoniosa. A identidade foi aplicada em fachadas, uniformes, sacolas e cartões de visita, reforçando sua personalidade e reconhecimento.",
+                    note: "Tons de azul e creme e um emblema de patinha dão à marca um ar amigável em cada aplicação.",
+                },
+                nutricao: {
+                    lede: "Série de posts para uma nutricionista que descomplica a relação com a comida. Sem terrorismo alimentar, sem dieta de proibições — o equilíbrio como prato principal.",
+                    note: "Tipografia editorial e colagens de comida real: a mensagem séria entra leve, post a post.",
+                },
+                pearl: {
+                    lede: "Campanha para uma clínica odontológica, com identidade azul confiante e tom direto. A ideia é lembrar que cuidar do sorriso é cuidado — e que dor de dente nunca é normal.",
+                    note: "Formas orgânicas, 3D e fotografia próxima conduzem o olhar do alerta à ação: agendar.",
+                },
+                millymel: {
+                    lede: "A identidade visual da MillyMel foi desenvolvida para transmitir delicadeza, elegância e afeto. O nome da marca surgiu da união dos nomes Milena e Emanuel, filhos da empreendedora, trazendo um significado especial e familiar ao negócio. A escolha dos tons de rosa marsala e champagne, combinada ao símbolo da rosa, foi inspirada no trabalho da marca com rosas eternas. O resultado é uma identidade visual sofisticada e delicada, que representa o amor, a beleza e a eternidade dos sentimentos.",
+                    note: "Marsala e champagne, com o símbolo da rosa: uma marca que fala de afeto e permanência.",
                 },
             },
         },

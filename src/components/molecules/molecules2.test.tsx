@@ -12,6 +12,6 @@ test("ServiceCard mostra idx, título e descrição", () => {
     );
     expect(screen.getByText("S/01")).toBeInTheDocument();
     expect(
-        screen.getByRole("heading", { name: "Identidade & Branding" })
+        screen.getByRole("heading", { name: "Identidade Visual" })
     ).toBeInTheDocument();
 });

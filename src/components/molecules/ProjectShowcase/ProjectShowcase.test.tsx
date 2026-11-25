@@ -33,7 +33,7 @@ test("ProjectShowcase mostra nome, segmento e lede", () => {
     ).toBeInTheDocument();
     expect(screen.getByText("Restaurante")).toBeInTheDocument();
     expect(
-        screen.getByText(/restaurante de clima afetivo/i)
+        screen.getByText(/savana africana/i)
     ).toBeInTheDocument();
 });
 

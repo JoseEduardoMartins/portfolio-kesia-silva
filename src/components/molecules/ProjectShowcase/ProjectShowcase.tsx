@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Reveal from "@/components/Reveal";
+import ProjectCarousel from "@/components/molecules/ProjectCarousel";
 import type { Project, ProjectImage, ProjectRow } from "@/types";
 
 const Figure = ({ image }: { image: ProjectImage }) => (
@@ -65,7 +66,7 @@ const ProjectShowcase = ({ project }: { project: Project }) => {
             <Reveal className="flex flex-wrap justify-between items-end gap-x-8 gap-y-3 pb-[clamp(1rem,2.5vw,1.5rem)]">
                 <div>
                     <div className="font-mono text-coral text-[0.8rem] tracking-[0.25em] uppercase">
-                        {project.index} — Identidade visual
+                        {project.index} — {project.kind ?? "Identidade visual"}
                     </div>
                     <h3 className="font-display text-[clamp(2.8rem,1.5rem+5vw,5.5rem)] leading-[0.95] mt-[0.4rem]">
                         {project.name}
@@ -85,13 +86,22 @@ const ProjectShowcase = ({ project }: { project: Project }) => {
                 {t(project.ledeKey)}
             </Reveal>
 
-            {project.rows.map((row, i) => (
-                <Row
-                    key={`${project.slug}-${i}`}
-                    row={row}
-                    note={row.noteKey ? t(row.noteKey) : undefined}
-                />
-            ))}
+            {project.layout === "carousel" ? (
+                <Reveal className="reveal-media">
+                    <ProjectCarousel
+                        images={project.rows.flatMap((row) => row.images)}
+                        label={`Carrossel · ${project.name}`}
+                    />
+                </Reveal>
+            ) : (
+                project.rows.map((row, i) => (
+                    <Row
+                        key={`${project.slug}-${i}`}
+                        row={row}
+                        note={row.noteKey ? t(row.noteKey) : undefined}
+                    />
+                ))
+            )}
         </article>
     );
 };
