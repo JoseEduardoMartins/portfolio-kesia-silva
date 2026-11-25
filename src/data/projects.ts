@@ -27,8 +27,11 @@ const projects: Project[] = [
                 ],
             },
             {
-                type: "full",
-                images: [img("savora", "faixada", "Sinalização de fachada do restaurante Savora, com o emblema da savana em dourado", "Sinalização de fachada")],
+                type: "pair",
+                images: [
+                    img("savora", "cartao", "Cartão de visita da Savora", "Cartão de visita"),
+                    img("savora", "post", "Post de Instagram da Savora com prato de carne grelhada no feed @savora.gastronomia", "Post de Instagram"),
+                ],
             },
             {
                 type: "pair",
@@ -48,16 +51,13 @@ const projects: Project[] = [
             {
                 type: "pair",
                 images: [
-                    img("savora", "cartao", "Cartão de visita da Savora", "Cartão de visita"),
                     img("savora", "envelope", "Envelope de talher da Savora", "Envelope de talher"),
+                    img("savora", "avental", "Avental com a marca Savora", "Avental"),
                 ],
             },
             {
-                type: "pair",
-                images: [
-                    img("savora", "avental", "Avental com a marca Savora", "Avental"),
-                    img("savora", "post", "Post de Instagram da Savora com prato de carne grelhada no feed @savora.gastronomia", "Post de Instagram"),
-                ],
+                type: "full",
+                images: [img("savora", "faixada", "Sinalização de fachada do restaurante Savora, com o emblema da savana em dourado", "Sinalização de fachada")],
             },
         ],
     },
@@ -71,20 +71,20 @@ const projects: Project[] = [
         rows: [
             {
                 type: "full",
-                images: [img("infinider", "card-1", "Cartões de visita da Infinider sobre superfície escura", "Cartões de visita")],
+                images: [img("infinider", "logo", "Monograma IN da Infinider", "Monograma")],
             },
             {
                 type: "pair",
                 images: [
+                    img("infinider", "card-1", "Cartões de visita da Infinider sobre superfície escura", "Cartões de visita"),
                     img("infinider", "card-2", "Frente e verso do cartão Infinider", "Frente & verso"),
-                    img("infinider", "card-3", "Detalhe do cartão Infinider", "Detalhe"),
                 ],
             },
             {
                 type: "offset",
                 noteKey: "work.projects.infinider.note",
                 images: [
-                    img("infinider", "logo", "Monograma IN da Infinider", "Monograma"),
+                    img("infinider", "card-3", "Detalhe do cartão Infinider", "Detalhe"),
                     img("infinider", "card-4", "Detalhe do verso do cartão Infinider", "Verso"),
                 ],
             },
@@ -114,20 +114,20 @@ const projects: Project[] = [
         rows: [
             {
                 type: "full",
-                images: [img("mundo-pet-feliz", "lona", "Lona de fachada do Mundo Pet Feliz", "Lona de fachada")],
+                images: [img("mundo-pet-feliz", "cartao", "Cartão de visita do Mundo Pet Feliz", "Cartão de visita")],
             },
             {
                 type: "pair",
                 images: [
-                    img("mundo-pet-feliz", "camiseta", "Camiseta de uniforme do Mundo Pet Feliz", "Uniforme"),
                     img("mundo-pet-feliz", "sacola", "Sacola do Mundo Pet Feliz", "Sacola"),
+                    img("mundo-pet-feliz", "camiseta", "Camiseta de uniforme do Mundo Pet Feliz", "Uniforme"),
                 ],
             },
             {
                 type: "offset",
                 noteKey: "work.projects.mundoPetFeliz.note",
                 images: [
-                    img("mundo-pet-feliz", "cartao", "Cartão de visita do Mundo Pet Feliz", "Cartão de visita"),
+                    img("mundo-pet-feliz", "lona", "Lona de fachada do Mundo Pet Feliz", "Lona de fachada"),
                 ],
             },
         ],
