@@ -37,12 +37,13 @@ const ptBr = {
             script: "oi, eu sou a Kesia",
             portraitReserved: "retrato · espaço reservado",
             leadPre:
-                "Uno a sensibilidade estética do design clássico à inovação tecnológica — para transformar ideias em ",
-            leadHl: "design de alto impacto",
-            leadPost: ".",
-            p1: "Sou designer gráfica e atuo no desenvolvimento de soluções visuais estratégicas na <s>Feel Tech RH</s> e na <s>Feel Academy</s>, criando identidades para redes sociais, apresentações corporativas de alto impacto e materiais digitais que conectam marcas ao seu público-alvo.",
-            p2: "Meu processo une o cuidado do design gráfico clássico ao uso estratégico de inteligências artificiais generativas. Trabalho com <s>Canva</s> em sinergia com <s>ChatGPT</s> e <s>Gemini</s> para acelerar o brainstorming de layouts, refinar conceitos e entregar com agilidade e precisão.",
-            p3: "Com formação em Fundamentos do Design Gráfico e Storytelling para Marketing Digital, meu foco vai além da estética: crio narrativas visuais funcionais que geram engajamento, clareza e resultado.",
+                "Sou uma profissional em desenvolvimento na área de ",
+            leadHl: "Design Gráfico",
+            leadPost:
+                ", com foco na criação de projetos visuais que unem criatividade, estética e comunicação.",
+            p1: "Tenho conhecimento nas ferramentas <s>Canva</s> e <s>Affinity</s>, que utilizo para desenvolver identidades visuais, materiais gráficos e conteúdos para mídias digitais.",
+            p2: "Para ampliar meus conhecimentos, realizei cursos de extensão em História do Design, Fundamentos do Design Gráfico e Storytelling para Marketing Digital, fortalecendo minha visão criativa e estratégica.",
+            p3: "Estou sempre em busca de aprendizado e evolução profissional, com o objetivo de transformar ideias em soluções visuais que transmitam a identidade e a essência de cada marca.",
         },
         services: {
             label: "Serviços",
