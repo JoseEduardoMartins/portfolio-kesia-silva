@@ -139,7 +139,6 @@ const projects: Project[] = [
         segment: "Nutricionista",
         deliverables: "Conteúdo para redes · Carrossel",
         kind: "Conteúdo para redes",
-        layout: "carousel",
         ledeKey: "work.projects.nutricao.lede",
         rows: [
             {
@@ -174,7 +173,6 @@ const projects: Project[] = [
         segment: "Odontologia",
         deliverables: "Conteúdo para redes · Campanha",
         kind: "Conteúdo para redes",
-        layout: "carousel",
         ledeKey: "work.projects.pearl.lede",
         rows: [
             {

@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import Reveal from "@/components/Reveal";
-import ProjectCarousel from "@/components/molecules/ProjectCarousel";
 import type { Project, ProjectImage, ProjectRow } from "@/types";
 
 const Figure = ({ image }: { image: ProjectImage }) => (
@@ -86,22 +85,13 @@ const ProjectShowcase = ({ project }: { project: Project }) => {
                 {t(project.ledeKey)}
             </Reveal>
 
-            {project.layout === "carousel" ? (
-                <Reveal className="reveal-media">
-                    <ProjectCarousel
-                        images={project.rows.flatMap((row) => row.images)}
-                        label={`Carrossel · ${project.name}`}
-                    />
-                </Reveal>
-            ) : (
-                project.rows.map((row, i) => (
-                    <Row
-                        key={`${project.slug}-${i}`}
-                        row={row}
-                        note={row.noteKey ? t(row.noteKey) : undefined}
-                    />
-                ))
-            )}
+            {project.rows.map((row, i) => (
+                <Row
+                    key={`${project.slug}-${i}`}
+                    row={row}
+                    note={row.noteKey ? t(row.noteKey) : undefined}
+                />
+            ))}
         </article>
     );
 };

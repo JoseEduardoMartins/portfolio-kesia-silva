@@ -26,6 +26,12 @@ DEFAULT_SRC_DIRS = [
     Path.home() / "Downloads" / "PORTIFOLIO 2",
 ]
 
+# Recortes aplicados antes do resize — "slug/nome": (left, top, right, bottom).
+# A capa da nutrição vem com faixas laterais (preta/texturizada); recortamos só o painel.
+CROPS = {
+    "nutricao/capa": (473, 0, 1553, 1351),
+}
+
 # destino (slug) -> { arquivo WebP de saída: nome do PNG de origem }
 MAPPING = {
     "savora": {
@@ -119,6 +125,9 @@ def main() -> int:
                 continue
             with Image.open(src) as im:
                 im = im.convert("RGB")
+                box = CROPS.get(f"{slug}/{name}")
+                if box:
+                    im = im.crop(box)
                 if im.width > MAX_WIDTH:
                     h = round(im.height * MAX_WIDTH / im.width)
                     im = im.resize((MAX_WIDTH, h), Image.LANCZOS)

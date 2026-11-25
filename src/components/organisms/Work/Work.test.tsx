@@ -20,14 +20,12 @@ test("Work mostra o título e os três projetos", () => {
 });
 
 test("Work renderiza todas as peças com alt e caminho /projetos/", () => {
-    const { container } = render(<Work />);
+    render(<Work />);
     const total = projects.reduce(
         (n, p) => n + p.rows.reduce((m, r) => m + r.images.length, 0),
         0
     );
-    // querySelectorAll em vez de getByRole: slides inativos do carrossel ficam
-    // aria-hidden (fora da árvore de acessibilidade), mas continuam no DOM.
-    const imgs = Array.from(container.querySelectorAll("img"));
+    const imgs = screen.getAllByRole("img");
     expect(imgs).toHaveLength(total);
     imgs.forEach((img) => {
         expect(img).toHaveAttribute("alt");
